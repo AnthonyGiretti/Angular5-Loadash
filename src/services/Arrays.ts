@@ -22,7 +22,7 @@ export class ArraysService {
     }
 
     /**
-     * Creates an array with all falsey values removed. 
+     * Creates an array with all falsey values removed.
      * The values false, null, 0, "", undefined, and NaN are falsey.
      * @param array
      */
@@ -30,4 +30,12 @@ export class ArraysService {
         return _.compact(array);
     }
 
+    /**
+     * Creates a new array concatenating array with any additional arrays and/or values.
+     * @param array
+     * @param values
+     */
+    public concat<T>(array: Array<T>, ...values: Array<T>): Array<T> {
+        return _.concat(array, ...values);
+    }
 }
