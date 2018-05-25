@@ -38,4 +38,12 @@ export class ArraysService {
     public concat<T>(array: Array<T>, ...values: Array<T>): Array<T> {
         return _.concat(array, ...values);
     }
+
+    /**
+     * Creates an array of array values not included in the other given arrays using SameValueZero for equality comparisons.
+     * The order and references of result values are determined by the first array.
+     */
+    public difference<T>(array: Array<T>, ...values: Array<T>): Array<T> {
+        return _.difference(array, ...values);
+    }
 }

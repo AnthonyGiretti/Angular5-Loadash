@@ -22,6 +22,9 @@ export class AppComponent implements OnInit {
     console.log('compact sample :');
     console.log(this._arraysService.compact(['Apple', 0, 'Banana', '', 'Grapefruit']));
 
+    console.log('concat sample :');
+    console.log(this._arraysService.concat(['Apple', 'Banana'], 'Grapefruit', 'Lemon'));
+
   }
 
 }
