@@ -46,4 +46,14 @@ export class ArraysService {
     public difference<T>(array: Array<T>, ...values: Array<Array<T>>): Array<T> {
         return _.difference(array, ...values);
     }
+
+    /**
+     * This method is like _.difference except that it accepts iteratee which is invoked for each element of array
+     * and values to generate the criterion by which they're compared.
+     * The order and references of result values are determined by the first array.
+     * The iteratee is invoked with one argument:
+     */
+    public differenceBy<T>(delegate: Function | String, array: Array<T>, ...values: Array<Array<T>>): Array<T> {
+        return _.differenceBy(array, ...values, delegate);
+    }
 }
