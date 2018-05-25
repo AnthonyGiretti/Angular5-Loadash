@@ -25,6 +25,9 @@ export class AppComponent implements OnInit {
     console.log('concat sample :');
     console.log(this._arraysService.concat(['Apple', 'Banana'], 'Grapefruit', 'Lemon'));
 
+    console.log('difference sample :');
+    console.log(this._arraysService.difference(['Apple', 'Banana'], ['Grapefruit', 'Lemon', 'Banana']));
+
   }
 
 }

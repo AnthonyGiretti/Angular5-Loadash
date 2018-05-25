@@ -43,7 +43,7 @@ export class ArraysService {
      * Creates an array of array values not included in the other given arrays using SameValueZero for equality comparisons.
      * The order and references of result values are determined by the first array.
      */
-    public difference<T>(array: Array<T>, ...values: Array<T>): Array<T> {
+    public difference<T>(array: Array<T>, ...values: Array<Array<T>>): Array<T> {
         return _.difference(array, ...values);
     }
 }
