@@ -19,6 +19,9 @@ export class AppComponent implements OnInit {
     console.log('chunk sample :');
     console.log(this._arraysService.chunk(['Apple', 'Banana', 'Grapefruit'], 2));
 
+    console.log('compact sample :');
+    console.log(this._arraysService.compact(['Apple', 0, 'Banana', '', 'Grapefruit']));
+
   }
 
 }
