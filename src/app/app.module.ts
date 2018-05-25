@@ -1,9 +1,7 @@
+import { AppComponent } from './app.component';
+import { ArraysService } from '../services/Arrays';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
-
 
 @NgModule({
   declarations: [
@@ -12,7 +10,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ArraysService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
