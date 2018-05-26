@@ -41,7 +41,10 @@ export class AppComponent implements OnInit {
                                                 ['Apples', 'Banana', 'Grapefruit'],
                                                 ['Banana']));
 
-
+    console.log('differenceWith sample :');
+    console.log(this._arraysService.differenceWith((x, y) => JSON.stringify(x) === JSON.stringify(y),
+                                                  [{'fruitName': 'Apple'}, {'fruitName': 'Banana'}, {'fruitName': 'Grapefruit'}],
+                                                  [{'fruitName': 'Banana'}]));
 
   }
 
