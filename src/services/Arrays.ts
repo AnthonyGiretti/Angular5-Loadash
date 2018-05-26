@@ -68,4 +68,17 @@ export class ArraysService {
     public differenceWith<T>(delegate: Function | String, array: Array<T>, ...values: Array<Array<T>>): Array<T> {
         return _.differenceWith(array, ...values, delegate);
     }
+
+    /**
+     * Creates a slice of array with n elements dropped from the beginning.
+     * @param array
+     * @param n
+     */
+    public drop<T>(array: Array<T>, n?: Number): Array<T> {
+        if (n > 0) {
+            return _.drop(array, n);
+        } else {
+            return _.drop(array);
+        }
+    }
 }
