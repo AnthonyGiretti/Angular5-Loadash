@@ -28,7 +28,18 @@ export class AppComponent implements OnInit {
     console.log('difference sample :');
     console.log(this._arraysService.difference(['Apple', 'Banana'], ['Grapefruit', 'Lemon', 'Banana']));
 
-  
+    console.log('differenceBy sample :');
+    console.log(this._arraysService.differenceBy(Math.floor, [2.1, 1.2], [2.3, 3.4], [2.4, 3.1]));
+
+    console.log('differenceBy sample :');
+    console.log(this._arraysService.differenceBy('fruitName',
+                                                [{'fruitName': 'Apple'}, {'fruitName': 'Banana'}, {'fruitName': 'Grapefruit'}],
+                                                [{'fruitName': 'Banana'}]));
+
+    console.log('differenceBy sample :');
+    console.log(this._arraysService.differenceBy((x) => x.length,
+                                                ['Apples', 'Banana', 'Grapefruit'],
+                                                ['Banana']));
 
   }
 
