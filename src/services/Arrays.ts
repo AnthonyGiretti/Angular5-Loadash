@@ -56,4 +56,16 @@ export class ArraysService {
     public differenceBy<T>(delegate: Function | String, array: Array<T>, ...values: Array<Array<T>>): Array<T> {
         return _.differenceBy(array, ...values, delegate);
     }
+
+    /**
+     * This method is like _.difference except that it accepts comparator which is invoked to compare elements of array to values.
+     * The order and references of result values are determined by the first array.
+     * The comparator is invoked with two arguments: (arrVal, othVal).
+     * @param delegate
+     * @param array
+     * @param values
+     */
+    public differenceWith<T>(delegate: Function | String, array: Array<T>, ...values: Array<Array<T>>): Array<T> {
+        return _.differenceWith(array, ...values, delegate);
+    }
 }
