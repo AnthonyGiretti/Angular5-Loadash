@@ -46,6 +46,15 @@ export class AppComponent implements OnInit {
                                                   [{'fruitName': 'Apple'}, {'fruitName': 'Banana'}, {'fruitName': 'Grapefruit'}],
                                                   [{'fruitName': 'Banana'}]));
 
+    console.log('drop sample :');
+    console.log(this._arraysService.drop(['Apple', 'Banana', 'Grapefruit', 'Lemon', 'Banana']));
+
+    console.log('drop sample :');
+    console.log(this._arraysService.drop(['Apple', 'Banana', 'Grapefruit', 'Lemon', 'Banana'], 1));
+
+    console.log('drop sample :');
+    console.log(this._arraysService.drop(['Apple', 'Banana', 'Grapefruit', 'Lemon', 'Banana'], 2));
+
   }
 
 }
