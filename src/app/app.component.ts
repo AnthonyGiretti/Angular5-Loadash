@@ -55,6 +55,15 @@ export class AppComponent implements OnInit {
     console.log('drop sample :');
     console.log(this._arraysService.drop(['Apple', 'Banana', 'Grapefruit', 'Lemon', 'Banana'], 2));
 
+    console.log('dropRight sample :');
+    console.log(this._arraysService.dropRight(['Apple', 'Banana', 'Grapefruit', 'Lemon', 'Banana']));
+
+    console.log('dropRight sample :');
+    console.log(this._arraysService.dropRight(['Apple', 'Banana', 'Grapefruit', 'Lemon', 'Banana'], 1));
+
+    console.log('dropRight sample :');
+    console.log(this._arraysService.dropRight(['Apple', 'Banana', 'Grapefruit', 'Lemon', 'Banana'], 2));
+
   }
 
 }
