@@ -81,4 +81,17 @@ export class ArraysService {
             return _.drop(array);
         }
     }
+
+    /**
+     * Creates a slice of array with n elements dropped from the end.
+     * @param array
+     * @param n
+     */
+    public dropRight<T>(array: Array<T>, n?: Number): Array<T> {
+        if (n > 0) {
+            return _.dropRight(array, n);
+        } else {
+            return _.dropRight(array);
+        }
+    }
 }
