@@ -94,4 +94,15 @@ export class ArraysService {
             return _.dropRight(array);
         }
     }
+
+    /**
+     * Creates a slice of array excluding elements dropped from the end. 
+     * Elements are dropped until predicate returns falsey. 
+     * The delegate is invoked with three arguments: (value, index, array).
+     * @param array
+     * @param delegate
+     */
+    public dropRightWhile<T>(array: Array<T>, delegate: Function | object | Array<any> | String): Array<T> {
+        return _.dropRightWhile(array, delegate);
+    }
 }
